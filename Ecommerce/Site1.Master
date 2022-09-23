@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Ecommerce.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap css--%>
+    <link href="BootStrap/css/bootstrap.min.css" rel="stylesheet" />
+     <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="datatables/css/jquery-ui.css" rel="stylesheet" />
+    <link href="datatables/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+    <%--Coustom css--%>
+    <link href="css/CoustomStyleSheet.css" rel="stylesheet" />
+    <%--bootstrap jquery--%>
+    <script src="BootStrap/js/bootstrap.min.js"></script>
+    <script src="BootStrap/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="BootStrap/js/popper.min.js"></script>
+    <%--Datatables jquery--%>
+    <script src="datatables/js/jquery-3.5.1.js"></script>
+
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+    <script src="datatables/js/dataTables.jqueryui.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: Cambria;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+                <a class="navbar-brand" href="#">
+                 
+                    <img src="imgs/ecart.png" width="40"/>
+                    <span class="auto-style1">E-Shopping
+                </span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle=
+                    "collapse" data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item" style="font-family: Cambria">
+                            <a class="nav-link active" href="HomePage.aspx">Home</a>
+                        </li>
+                        <li class="nav-item" style="font-family: Cambria">
+                            <a class="nav-link active" href="#">About us</a>
+                        </li>
+                        <li class="nav-item" style="font-family: Cambria">
+                            <a class="nav-link active" href="#">Terms</a>
+                        </li>
+                        
+
+
+
+                     </ul>
+                    <ul class="navbar-nav">
+
+                        
+                        
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link active" ID="cart" runat="server" OnClick="cart_Click" Font-Size="Large"> <i class="fa-solid fa-cart-shopping"><asp:Label CssClass="badge bg-secondary p-1 align-items-end" ID="cartcounttxt" runat="server" Font-Size="XX-Small"></asp:Label>
+</i></asp:LinkButton>
+                            
+                         </li>
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link active" ID="Products" runat="server" OnClick="products_Click" Font-Names="Cambria" CausesValidation="False">Products</asp:LinkButton>
+                         </li>
+                         <li class="nav-item">
+                            <asp:LinkButton class="nav-link active" ID="UserLogin" runat="server" OnClick="UserLogin_Click" Font-Names="Cambria" CausesValidation="False"> User Login</asp:LinkButton>
+                         </li>
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link active" ID="SignUp" runat="server" OnClick="SignUp_Click" Font-Names="Cambria" CausesValidation="False"> Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link active" ID="Logout" runat="server" Visible="False" OnClick="Logout_Click" CausesValidation="False"><i class="fa-solid fa-right-from-bracket"></i> Logout </asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link active" ID="HelloUs" runat="server" Visible="False" CausesValidation="False" OnClick="HelloUs_Click" ><i class="fa-regular fa-user"></i> Hello User </asp:LinkButton>
+                        </li>
+                        </ul>
+                </div>
+        
+            </nav>
+        </div>
+            
+        <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+         <!-- Footer -->
+        
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="height:29px;font-family:Cambria">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="admin" runat="server" OnClick="admin_Click" CausesValidation="False" >Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="addproduct" runat="server" OnClick="addproduct_Click" Visible="False">Add Product</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="transaction" runat="server" Visible="False" OnClick="transaction_Click">Transaction</asp:LinkButton>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="height:30px;font-family:Cambria">
+                        <p style="color:whitesmoke">&copy All right Reversed. <a class="footerlinks" href="#" target="_blank">Virtusa</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- ./Footer -->
+    </form>
+</body>
+</html>

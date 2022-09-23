@@ -1,0 +1,38 @@
+﻿#footer1 {
+    background-color: cadetblue
+}
+
+#footer2 {
+    background-color: darkcyan
+}
+
+.footerlinks {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+    .footerlinks:hover {
+        color: crimson
+    }
+
+.login {
+    color: #FFFFFF;
+    background-color: #336699;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 1px 4px 2px;
+    text-align: right;
+    font-size: large;
+    font-family: serif;
+}
+
+.login:hover {
+    color: #ee563e;
+}
+
+
+#cartcounttxt {
+    background: #ff0000;
+    color: #fff;
+    vertical-align: top;
+}
