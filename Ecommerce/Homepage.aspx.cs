@@ -14,11 +14,6 @@ namespace Ecommerce
 
         }
 
-        protected void Timer1_Tick(object sender, EventArgs e)
-        {
-            Random r = new Random();
-            int i = r.Next(1,3);
-            Image1.ImageUrl = "~/BannerImages/" + i.ToString() + ".jpg";
-        }
+        
     }
 }
