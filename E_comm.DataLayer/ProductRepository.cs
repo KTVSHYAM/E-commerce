@@ -77,7 +77,7 @@ namespace E_comm.DataLayer
         {
             try
             {
-                command = new SqlDataAdapter($"update ecom_products set Pname='{products.PName}',Pbrand='{products.PBrand}',Pdesc='{products.PDescription}',Pimage='{products.PImage}',Pprice={products.PPrice},Pstock={products.Pstock},Pcategory='{products.PCategory}',ProductId='{products.PId}'", connection);
+                command = new SqlDataAdapter($"update ecom_products set Pname='{products.PName}',Pbrand='{products.PBrand}',Pdesc='{products.PDescription}',Pimage='{products.PImage}',Pprice={products.PPrice},Pstock={products.Pstock},Pcategory='{products.PCategory}' where ProductId='{products.PId}'", connection);
                 DataTable dt = new DataTable();
                 command.Fill(dt);
                 return dt;
